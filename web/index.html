@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#334053">
+  <title>DREISER RENEE LILIANE</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="favicon.png">
+  <style>
+    :root {
+      --ink: #334053;
+      --steel: #4e596f;
+      --teal: #0f8b8d;
+      --amber: #c2872b;
+      --paper: #f6f8fb;
+      --mist: #e7edf3;
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .topbar {
+      position: fixed;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 14px clamp(18px, 4vw, 56px);
+      color: var(--white);
+      background: rgba(51, 64, 83, 0.9);
+      backdrop-filter: blur(12px);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0;
+      min-width: 0;
+    }
+
+    .brand img {
+      width: 34px;
+      height: 34px;
+      border-radius: 8px;
+    }
+
+    .brand span {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .nav {
+      display: flex;
+      gap: 18px;
+      font-size: 0.94rem;
+      font-weight: 700;
+    }
+
+    .nav a {
+      text-decoration: none;
+      opacity: 0.88;
+    }
+
+    .hero {
+      min-height: 86vh;
+      display: flex;
+      align-items: end;
+      padding: 110px clamp(18px, 4vw, 56px) 56px;
+      color: var(--white);
+      background:
+        linear-gradient(90deg, rgba(31, 40, 54, 0.95) 0%, rgba(31, 40, 54, 0.72) 44%, rgba(31, 40, 54, 0.3) 100%),
+        url("featured.png") center / cover no-repeat;
+    }
+
+    .hero-content {
+      width: min(760px, 100%);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 8vw, 5.2rem);
+      line-height: 0.96;
+      letter-spacing: 0;
+      font-weight: 900;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin: 20px 0 0;
+      color: rgba(255, 255, 255, 0.9);
+      font-size: clamp(1rem, 2.2vw, 1.25rem);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 8px;
+      background: var(--teal);
+      color: var(--white);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.36);
+    }
+
+    main {
+      padding: 42px clamp(18px, 4vw, 56px) 60px;
+    }
+
+    .section {
+      width: min(1120px, 100%);
+      margin: 0 auto 44px;
+    }
+
+    .section h2 {
+      margin: 0 0 10px;
+      font-size: clamp(1.7rem, 4vw, 2.5rem);
+      line-height: 1.08;
+      letter-spacing: 0;
+    }
+
+    .section-lead {
+      max-width: 760px;
+      margin: 0;
+      color: var(--steel);
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .feature {
+      min-height: 180px;
+      padding: 20px;
+      border: 1px solid rgba(51, 64, 83, 0.1);
+      border-radius: 8px;
+      background: var(--white);
+    }
+
+    .feature strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--ink);
+      font-size: 1.05rem;
+    }
+
+    .feature p {
+      margin: 0;
+      color: var(--steel);
+    }
+
+    .workflow {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 24px;
+      align-items: center;
+      padding: 26px;
+      border-radius: 8px;
+      background: var(--ink);
+      color: var(--white);
+    }
+
+    .workflow img {
+      width: 100%;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .workflow ul {
+      display: grid;
+      gap: 12px;
+      margin: 18px 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .workflow li {
+      padding-left: 22px;
+      position: relative;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    .workflow li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.68em;
+      width: 9px;
+      height: 9px;
+      border-radius: 99px;
+      background: var(--amber);
+    }
+
+    .contact {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding-top: 26px;
+      border-top: 1px solid rgba(51, 64, 83, 0.14);
+    }
+
+    .contact p {
+      margin: 0;
+      color: var(--steel);
+    }
+
+    @media (max-width: 820px) {
+      .nav {
+        display: none;
+      }
+
+      .grid,
+      .workflow {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: 84vh;
+        padding-top: 96px;
+      }
+
+      .contact {
+        align-items: stretch;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="favicon.png" alt="">
+      <span>DREISER RENEE LILIANE</span>
+    </div>
+    <nav class="nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>DREISER RENEE LILIANE</h1>
+      <p>One local Android workspace for container tracking, incident reports, supply ordering, and appointment booking across daily business operations.</p>
+      <div class="hero-actions">
+        <a class="button" href="#services">View operations tools</a>
+        <a class="button secondary" href="#contact">Contact support</a>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section id="services" class="section">
+      <h2>Built for a busy operations desk</h2>
+      <p class="section-lead">The Android app keeps work records on the device, helping the team organize live tasks without accounts, cloud sync, or network services.</p>
+      <div class="grid">
+        <article class="feature">
+          <strong>Container tracking</strong>
+          <p>Record references, status, owners, and due dates for inbound and outbound container movement.</p>
+        </article>
+        <article class="feature">
+          <strong>Incident reporting</strong>
+          <p>Log operational issues with clear notes, priority, status, and responsible follow-up.</p>
+        </article>
+        <article class="feature">
+          <strong>Supply ordering</strong>
+          <p>Track local requests for seals, labels, stock room materials, and recurring site needs.</p>
+        </article>
+        <article class="feature">
+          <strong>Appointment booking</strong>
+          <p>Plan carrier, vendor, pickup, and receiving windows from the same daily queue.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="section workflow">
+      <div>
+        <h2>Clear local workflow from intake to close</h2>
+        <p>Each record can move through open, scheduled, awaiting, and complete states. The dashboard highlights near-term work so the desk can keep the day moving.</p>
+        <ul>
+          <li>Create a local record for the task type.</li>
+          <li>Assign reference, owner, priority, and due date.</li>
+          <li>Review status from the dashboard, queue, schedule, or detail screen.</li>
+        </ul>
+      </div>
+      <img src="featured.png" alt="Operations workspace visual for DREISER RENEE LILIANE">
+    </section>
+
+    <section id="contact" class="section contact">
+      <div>
+        <h2>Support</h2>
+        <p>DREISER RENEE LILIANE<br>support@dreiser-renee-liliane.com</p>
+      </div>
+      <a class="button" href="mailto:support@dreiser-renee-liliane.com">Email support</a>
+    </section>
+  </main>
+</body>
+</html>

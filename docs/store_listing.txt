@@ -1,0 +1,13 @@
+App name
+DREISER RENEE LILIANE
+
+Short description
+Track containers, incidents, supplies, and appointments in one local operations workspace.
+
+Full description
+DREISER RENEE LILIANE helps an operations desk keep daily business tasks organized on one Android device. The app supports container tracking, incident reporting, supply ordering, and appointment booking with clear statuses, owners, due dates, and notes.
+
+Create local work records, review the dashboard, filter the work queue, open appointment windows, and update status as tasks move from intake to completion. Records and preferences stay on the device with no account, cloud sync, analytics, advertising identifiers, or network features.
+
+Category
+Business
