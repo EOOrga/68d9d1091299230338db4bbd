@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "applications": {
+    "com.taziggg100.dreiser_ops": {
+      "title": "DREISER RENEE LILIANE",
+      "short_description": "Track containers, incidents, supplies, and appointments in one local...",
+      "full_description": "DREISER RENEE LILIANE helps an operations desk keep daily business tasks organized on one Android device. The app supports container tracking, incident reporting, supply ordering, and appointment booking with clear statuses, owners, due dates, and notes.\n\nCreate local work records, review the dashboard, filter the work queue, open appointment windows, and update status as tasks move from intake to completion. Records and preferences stay on the device with no account, cloud sync, analytics, advertising identifiers, or network features.",
+      "source_screenshots": [
+        "docs/screens/1.png",
+        "docs/screens/2.png",
+        "docs/screens/3.png"
+      ],
+      "generated_from": "existing repository listing metadata and README",
+      "generated_at": "2026-10-02T21:25:07.330135+00:00"
+    }
+  }
+}
