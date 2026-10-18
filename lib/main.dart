@@ -9,10 +9,10 @@ const developerName = 'DREISER RENEE LILIANE';
 const supportEmail = 'support@dreiser-renee-liliane.com';
 const _screenshotMode = bool.fromEnvironment('SCREENSHOT_MODE');
 
-const _ink = Color(0xFF334053);
+const _ink = Color(0xFF558B2F);
 const _steel = Color(0xFF4E596F);
-const _teal = Color(0xFF0F8B8D);
-const _amber = Color(0xFFC2872B);
+const _teal = Color(0xFF8BC34A);
+const _amber = Color(0xFF1565C0);
 const _paper = Color(0xFFF6F8FB);
 const _mist = Color(0xFFE7EDF3);
 
@@ -587,7 +587,7 @@ class DashboardScreen extends StatelessWidget {
         ),
         const SizedBox(height: 18),
         _SectionHeader(
-          title: 'Operations snapshot',
+          title: 'DREISER RENEE LILIANE',
           actionLabel: '${state.items.length} active records',
         ),
         const SizedBox(height: 10),
